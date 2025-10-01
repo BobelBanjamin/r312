@@ -30,9 +30,7 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22017
-          source: |
-            package.json
-            dist/*
+          source: "package.json, dist/*"
           target: "/var/www/r312/"
           strip_components: 1
           rm: false
